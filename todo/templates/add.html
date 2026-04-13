@@ -1,0 +1,37 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<h1>Add Task</h1>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+  <div class="container">
+
+    <h1>Priority-Based Todo List</h1>
+
+    <div class="card">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <label>Title</label>
+            <input type="text" name="title" required>
+
+            <label>Description</label>
+            <textarea name="description"></textarea>
+
+            <label>Deadline</label>
+            <input type="datetime-local" name="due_date">
+
+            
+
+            <label>Image</label>
+            <input type="file" name="image">
+
+            <button type="submit">Add Todo</button>
+        </form>
+    </div>
+
+    <a href="{% url 'task_list' %}" class="view-btn">View Tasks</a>
+
+</div>

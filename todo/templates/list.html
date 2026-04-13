@@ -1,0 +1,41 @@
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<script src="{% static 'js/script.js' %}"></script>
+
+<h1>All Tasks</h1>
+
+<a href="{% url 'add_task' %}">Add New Task</a>
+
+<div class="tasks">
+{% for task in tasks %}
+    <div class="task-card" >
+
+        <h3>
+        {% if task.completed %}
+            <s>{{ task.title }}</s>
+        {% else %}
+            {{ task.title }}
+        {% endif %}
+        </h3>
+
+        <p>{{ task.description }}</p>
+        <p>{{ task.priority }}</p>
+        <p>{{ task.due_date }}</p>
+
+        {% if task.image %}
+            <img src="{{ task.image.url }}" width="100">
+        {% endif %}
+
+        <a href="{% url 'toggle_task' task.id %}">
+            {% if task.completed %}
+                Pending
+            {% else %}
+                Completed
+            {% endif %}
+        </a>
+        <a href="{% url 'delete_task' task.id %}">DELETED</a>
+
+    </div>
+{% endfor %}
+</div>
