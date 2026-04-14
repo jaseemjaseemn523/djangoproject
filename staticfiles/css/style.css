@@ -1,0 +1,89 @@
+body {
+    font-family: Arial;
+    background: #6f8cc9;
+    
+}
+.tasks{
+    display: flex;
+}
+
+.task-card {
+    background: rgba(255,255,255,0.2);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+   
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+}
+
+.container {
+    text-align: center;
+    padding: 40px;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.card {
+    width: 500px;
+    margin: auto;
+    background: rgba(255,255,255,0.2);
+    padding: 25px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+
+  
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    background: #f0f0f0;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    width: 150px;
+    border: none;
+    background: #4a90e2;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #357abd;
+}
+
+.view-btn {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: black;
+}
